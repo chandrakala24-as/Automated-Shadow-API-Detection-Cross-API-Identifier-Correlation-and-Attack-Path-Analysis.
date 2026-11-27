@@ -1,0 +1,33 @@
+openapi: 3.0.3
+info:
+  title: RideShop public API
+  version: "1.0"
+security:
+  - bearer: []
+components:
+  securitySchemes:
+    bearer: { type: http, scheme: bearer }
+paths:
+  /api/v1/health:
+    get: { summary: Health check, security: [], responses: { "200": { description: OK } } }
+  /api/v1/products:
+    get: { summary: Public catalogue, security: [], responses: { "200": { description: OK } } }
+  /api/v1/me:
+    get: { summary: Current user, responses: { "200": { description: OK } } }
+  /api/v1/posts:
+    get: { summary: Community posts, responses: { "200": { description: OK } } }
+  /api/v1/posts/{postId}:
+    get: { summary: One post, responses: { "200": { description: OK } } }
+  /api/v1/orders:
+    get: { summary: My orders, responses: { "200": { description: OK } } }
+  /api/v1/orders/{orderId}:
+    get: { summary: One of my orders, responses: { "200": { description: OK } } }
+  /api/v1/vehicles/{vehicleId}/location:
+    get: { summary: Vehicle location, responses: { "200": { description: OK } } }
+  /api/v1/admin/stats:
+    get:
+      summary: Admin statistics
+      tags: [admin]
+      responses: { "200": { description: OK } }
+  /api/v1/invoices:
+    get: { summary: Invoices (planned), responses: { "200": { description: OK } } }

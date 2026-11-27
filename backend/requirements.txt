@@ -1,0 +1,6 @@
+cryptography==50.0.2
+fastapi==0.165.0
+httpx==0.29.0
+PyYAML==6.0.4
+SQLAlchemy==2.1.9
+uvicorn[standard]==0.54.0
